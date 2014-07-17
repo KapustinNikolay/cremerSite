@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Internet Shop</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="css/prices.css" type="text/css" rel="stylesheet">
+    <link href="css/stran.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/knockout.js" type="text/javascript"></script>
+    <script src="js/client.js" type="text/javascript"></script>
+    <script src="js/jquery.json.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/shopcart.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="greenStripe">
+    <div class="midLogo"><img src="img/botinok.png"></div>
+</div>
+<div class="mainDiv">
+    <div class="topElem">
+        <div class="botLogo"><img src="img/boot.bmp"></div>
+        <div class="userBar">
+            <div class="feedback">
+                <div class="phoneNumber"><img src="img/telephone_call_contact.png">&nbsp &nbsp 918-193 46 57</div>
+                <div class="mail"><img src="img/email_envelope.png">&nbsp &nbsp Обратная связь</div>
+            </div>
+            <div class="registration">
+                <div class="cart" onclick="location.href='shopcart.html'"><img src="img/Black_Cart.png"></div>
+                <div class="order-count" >
+                    <div class="text">Товаров в корзине: </div>
+                    <div class="count">0</div>
+                </div>
+                <div class="send-order">
+                    <div class="text">Оформить</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="navigation">
+            <ul>
+                <li class="main-page" onclick="location.href='index.html'">главная</li>
+                <li>импорт</li>
+                <li>услуги</li>
+                <li><div style="border: 0">бренды</div></li>
+            </ul>
+            <div class="search">
+                <div class="magnifier"><img src="img/magnifier.png"></div>
+                <div class="inp"><input type="text" placeholder="Поиск"/></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="overflow-y: auto">
+        <div class="name-block-cart">
+            <div class="text">
+                <div>ваши</div>
+                <div id="redText">заказы</div>
+            </div>
+            <div class="common-count">
+                <div class="text">общая сумма: </div>
+                <div class="common-sum">0</div>
+            </div>
+        </div>
+
+        <!-- ko foreach: orders -->
+
+        <div class="item">
+            <div class="productPicture" data-bind = "style: { 'background': img() }"></div>
+            <div class="info">
+                <div class="text" data-bind="text: 'vendor: ' + vendor()"></div>
+                <div class="text" data-bind="text: 'name: ' + name()"></div>
+                <div class="text" data-bind="text: 'price: ' + price()"></div>
+            </div>
+            <div class="delete-button"><button data-bind="click: $parent.deleteOrder">Удалить</button></div>
+        </div>
+
+        <!-- /ko -->
+
+    </div>
+</div>
+<div class="footer">
+    <div class="footerItems">
+        <div class="logo"><img src="img/boot.png"></div>
+        <div class="aboutUs">
+            <ul>
+                <li>О нас</li>
+                <li>Faq</li>
+                <li>Оплата и доставка</li>
+                <li>Контакты</li>
+            </ul>
+        </div>
+        <div class="socialNetwork">
+            <ul>
+                <li><img src="img/p.png"/></li>
+                <li><img src="img/twitter.png"/></li>
+                <li><img src="img/facebook.png"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin panel</title>
+    <link href="css/admin.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/knockout.js" type="text/javascript"></script>
+    <script src="js/admin.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="navigated-panel">
+    <div class="item">
+        <div class="view-button">
+            <div class="text-block">Add new</div>
+            <div class="arrow"></div>
+        </div>
+        <form class="work-place" id="main-form">
+            <div class="item-form">
+                <select name="category">
+                    <option>woman</option>
+                    <option>man</option>
+                    <option>kids</option>
+                </select>
+                <div class="text-block">Класс товара</div>
+            </div>
+            <div class="item-form">
+                <select name="vendor">
+                    <option>adidas</option>
+                    <option>camper</option>
+                    <option>converse</option>
+                    <option>newBalance</option>
+                    <option>nike</option>
+                    <option>puma</option>
+                    <option>superga</option>
+                </select>
+                <div class="text-block">Фирма товара</div>
+            </div>
+            <div class="item-form">
+                <input type="text" placeholder="Введите имя" name="name">
+                <div class="text-block">Название товара</div>
+            </div>
+            <div class="item-form">
+                <input type="number" placeholder="Введите цену" name="price">
+                <div class="text-block">Цена товара</div>
+            </div>
+            <div class="item-form">
+                <input type="text" name="img" placeholder="Введите название изображения">
+                <div class="text-block">Название изображение:</div>
+            </div>
+            <div class="item-form">
+                <input type="button" name="go" value="сохранить" id="data-send-button">
+            </div>
+        </form>
+    </div>
+    <div class="item">
+        <div class="view-button">
+            <div class="text-block">Find price</div>
+            <div class="arrow"></div>
+        </div>
+        <form class="work-place" id="search-form">
+            <div class="item-form">
+                <div class="text-block">Поиск товара: </div>
+            </div>
+            <div class="item-form">
+                <select name="vendor">
+                    <option>adidas</option>
+                    <option>camper</option>
+                    <option>converse</option>
+                    <option>newBalance</option>
+                    <option>nike</option>
+                    <option>puma</option>
+                    <option>superga</option>
+                </select>
+                <div class="text-block">Фирма товара</div>
+            </div>
+            <div class="item-form">
+                <input type="text" placeholder="Введите имя" name="name">
+                <div class="text-block">Название товара</div>
+            </div>
+            <div class="item-form">
+                <input type="button" name="go" value="поиск" id="search-button">
+            </div>
+        </form>
+    </div>
+    <div class="item">
+        <div class="view-button">
+            <div class="text-block" id="show-all-button">Show all prices</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="view-button">
+            <div class="text-block" id="show-all-orders">Show orders</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="view-button">
+            <div class="text-block" id="show-completed-orders">Completed orders</div>
+        </div>
+    </div>
+</div>
+<div class="main-panel">
+    <!-- ko foreach: priceList -->
+    <div class="result">
+        <div class="info-block">
+            <div class="result-item" data-bind="text: 'Фирма: ' + vendor()"></div>
+            <div class="result-item" data-bind="text: 'Название: ' + name()"></div>
+            <div class="result-item" data-bind="text: 'Класс: ' + category()"></div>
+        </div>
+        <div class="button-block">
+            <button class="change-button">Изменить</button>
+            <button class="delete-button">Удалить</button>
+        </div>
+        <form class="work-place">
+            <input type="text" style="display: none" name="id" data-bind="value: _id">
+            <div class="item-form">
+                <select name="category" data-bind="value: category">
+                    <option>woman</option>
+                    <option>man</option>
+                    <option>kids</option>
+                </select>
+                <div class="text-block">Класс товара</div>
+            </div>
+            <div class="item-form">
+                <select name="vendor" data-bind="value: vendor()">
+                    <option>adidas</option>
+                    <option>camper</option>
+                    <option>converse</option>
+                    <option>newBalance</option>
+                    <option>nike</option>
+                    <option>puma</option>
+                    <option>superga</option>
+                </select>
+                <div class="text-block">Фирма товара</div>
+            </div>
+            <div class="item-form">
+                <input type="text" placeholder="Введите имя" name="name" data-bind="value: name()">
+                <div class="text-block">Название товара</div>
+            </div>
+            <div class="item-form">
+                <input type="number" placeholder="Введите цену" name="price" data-bind="value: price()">
+                <div class="text-block">Цена товара</div>
+            </div>
+            <div class="item-form">
+                <input type="text" name="img" placeholder="Введите название изображения" data-bind="value: img()">
+                <div class="text-block">Название изображение:</div>
+            </div>
+            <div class="item-form">
+                <input type="button" name="go" value="сохранить" class="save-change">
+            </div>
+        </form>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko foreach: orderList -->
+    <div class="result">
+        <div class="info-block">
+            <div class="result-item" data-bind="text: 'Фамилия: ' + fam()"></div>
+            <div class="result-item" data-bind="text: 'Имя: ' + name()"></div>
+            <div class="result-item" data-bind="text: 'Отчество: ' + secondName()"></div>
+            <div class="result-item" data-bind="text: 'Адрес: ' + address()"></div>
+            <div class="result-item" data-bind="text: 'Цена: ' + price()"></div>
+            <div class="result-item" data-bind="text: 'Заказанные товары: ' + prices()"></div>
+            <div class="result-item" data-bind="text: 'Колличество: ' + count()"></div>
+            <div class="result-item" data-bind="text: 'Время: ' + date()"></div>
+            <button id="accept-order" data-bind="visible: accepted() === false, click: $parent.acceptOrder">accept</button>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+</body>
+</html>

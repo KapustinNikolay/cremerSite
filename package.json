@@ -1,0 +1,8 @@
+{
+  "name" : "internet-shop",
+  "version" : "0.0.1",
+   "dependencies":{
+     "mongodb" : "*",
+     "express": "*"
+   }
+}

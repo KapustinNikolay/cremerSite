@@ -1,0 +1,411 @@
+body {
+    height: 100%;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 0;
+}
+.greenStripe {
+    width: 100%;
+    background-color: rgb(156, 205, 141);
+    position: absolute;
+    top: 215px;
+    height: 677px;
+    left: 0;
+}
+.logoText {
+    padding: 1px;
+    height: 530px;
+    position: relative;
+}
+.midLogoText {
+    position: relative;
+    top: 120px;
+    margin: 2px;
+}
+.midLogoTopText {
+    font-family: Myriad Pro;
+    font-size: 134.36pt;
+    line-height: 0.55;
+}
+.midLogoBotText {
+    font-family: Myriad Pro;
+    font-size: 65.76pt;
+    color: white;
+}
+.midLogo {
+    position: relative;
+    bottom: 24px;
+    float: right;
+}
+.mainDiv {
+    min-height: 100%;
+    width: 963px;
+    position: relative;
+    margin: 0 auto;
+}
+.header {
+    background-color: rgb(242, 242, 242);
+    position: relative;
+}
+.header .navigation {
+    border: 1px rgba(207, 200, 188, .2) solid;
+    height: 70px;
+}
+.header .navigation ul {
+    display: inline-block;
+    margin: 1px;
+}
+.header .navigation li  {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    margin: 13px;
+    padding: 2px;
+    font-size: 24pt;
+    font-family: Myriad Pro;
+    color: rgb(68, 68, 68);
+    border-right: 1px rgb(207, 200, 188) solid;
+    padding-right: 30px ;
+}
+.header .navigation li:hover {
+    color: red;
+}
+
+.header .navigation .search {
+    display: inline-block;
+    border: 1px rgb(207, 200, 188) solid; ;
+    border-radius: 25px;
+    width: 220px;
+}
+.header .navigation .magnifier {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    margin-left: 5px;
+    padding-top: 3px;
+}
+input {
+    border: 0;
+    background-color: rgb(242, 242, 242);
+    width: 150px;
+    height: 20px;
+}
+.topElem {
+    height: 161px;
+}
+.userBar {
+    display: inline-block;
+    width: 335px;
+    height: 103px;
+    position: relative;
+    left: 372px;
+}
+.feedback {
+    height: 51px;
+}
+.feedback .phoneNumber {
+    width: 39%;
+}
+.feedback .mail {
+    cursor: default;
+    width: 40%;
+}
+.feedback .mail:hover {
+    color: blue;
+}
+.feedback .phoneNumber, .mail{
+    margin-top: 18px;
+    font-family: MS Sans Serif;
+    font-size: 10pt;
+    text-align: right;
+    display: inline-block;
+}
+.registration {
+    border: 1px solid white;
+    height: 52px;
+    border-radius: 5px;
+}
+.cart {
+    position: relative;
+    top: 15%;
+    display: inline-block;
+    margin: 6px;
+    padding: 2px 21px 2px 7px;
+    border-right: 1px solid rgb(207, 200, 188);
+}
+.entering {
+    cursor: pointer;
+    font-family: Myriad Pro;
+    font-size: 14pt;
+    text-decoration: underline;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 11px;
+}
+.redButton {
+    cursor: pointer;
+    display: inline-block;
+    width: 167px;
+    height: 40px;
+    background: linear-gradient(to top right, rgb(240, 57, 40), rgba(245, 86, 87, .5));
+    border-radius: 5px;
+    font-family: Myriad Pro;
+    font-size: 16pt;
+    line-height: 35px;
+    border: 1px solid rgba(245, 86, 87, .8);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 23px;
+}
+.botLogo {
+    position: relative;
+    top: 53px;
+    width: 250px;
+    height: 110px;
+    display: inline-block;
+}
+.navigationPanel {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.navigationItem {
+    cursor: pointer;
+    background-color: white;
+    display: inline-block;
+    width: 312px;
+    padding: 3px;
+}
+.navigationItem:hover {
+    border: 2px solid red;
+    padding: 1px;
+}
+.navigationItemHead {
+    font-family: "Myriad Pro";
+    text-align: center;
+    font-size: 40.46px;
+    color: black;
+    padding: 3px;
+}
+.navigationItemImg {
+    position: relative;
+    align-items: center;
+    margin: 0px 69px;
+    padding: 1px;
+}
+.navigationItem p {
+    font-family: "Myriad Pro";
+    text-align: center;
+    color: red;
+    font-size: 25.29pt;
+    margin: 1px;
+    padding: 1px;
+}
+.PriceNumber, .navigationItemStripes {
+    font-family: "Myriad Pro";
+    text-align: center;
+    color: black;
+    font-size: 15.17pt;
+    padding: 1px;
+}
+.container {
+    height: 785px;
+    background-color: white;
+}
+.specialPrice {
+    position: relative;
+    width: 99%;
+    height: 750px;
+    background-color: white;
+    padding-left: 1%;
+}
+.specialPrice .text {
+    cursor: no-drop;
+}
+.specialPrice .text div {
+    font-family: "Myriad Pro";
+    font-size: 23.82pt;
+    display: inline-block;
+    margin: 10px 0 15px 2px;
+    padding: 1px;
+}
+#redText {
+    margin-left: 0;
+    color: red;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 121px;
+    background-color: red;
+    left: 0;
+    margin-top: 80px;
+}
+.footer .footerItems {
+    position: relative;
+    margin: 0 auto;
+    width: 963px;
+}
+.footerItems .logo {
+    display: inline-block;
+}
+.footerItems .aboutUs {
+    display: inline-block;
+    padding: 1px;
+}
+.footerItems li {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    color: white;
+    font-family: Arial;
+    font-size: 15pt;
+    text-align: center;
+    padding: 3px;
+    margin: 10px;
+}
+.socialNetwork {
+    display: inline-block;
+    padding: 1px;
+    position: relative;
+    margin-left: 80px;
+}
+.socialNetwork li {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+    margin: 10px 0;
+}
+.arrows {
+    display: none;
+    position: relative;
+    left: 400px;
+}
+.arroww {
+    cursor: pointer;
+    font-family: "Myriad Pro";
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+.arroww:hover {
+    color: red;
+}
+.order-count {
+    padding: 2px 5px 2px 7px;
+    margin: 6px;
+    height: 25px;
+    border-right: 1px solid rgb(207, 200, 188);
+    width: 155px;
+    display: inline-block;
+    position: relative;
+}
+.order-count .text {
+    color: rgb(68, 68, 68);;
+    position: relative;
+    display: inline-block;
+}
+
+.order-count .count {
+    color: rgb(68, 68, 68);
+    position: relative;
+    display: inline-block;
+}
+.name-block-cart .text{
+    display: inline-block;
+}
+
+/*--------------------------------------------------------*/
+
+
+.name-block-cart .text div {
+    font-family: "Myriad Pro";
+    font-size: 23.82pt;
+    display: inline-block;
+    margin: 10px 0 15px 2px;
+    padding: 1px;
+}
+.item {
+    width: 450px;
+    position: relative;
+    margin: 4px;
+    padding: 5px;
+    background-color: rgb(242, 242, 242);
+    display: inline-block;
+}
+
+.item .productPicture {
+    display: inline-block;
+}
+.item .info {
+    margin: 20px 15px;
+    display: inline-block;
+    line-height: 36px;
+    position: absolute;
+}
+.item .info .text {
+    font-family: "Myriad Pro";
+    font-size: 15pt;
+    color: rgb(68, 68, 68);
+}
+.item .delete-button {
+    display: inline-block;
+    margin-top: 130px;
+    float: right;
+    position: relative;
+}
+
+.common-count {
+    display: inline-block;
+    position: relative;
+    font-family: "Myriad Pro";
+    font-size: 15pt;
+    color: rgb(68, 68, 68);
+    padding: 10px 11px;
+    height: 22px;
+    border-left: 1px solid rgb(207, 200, 188);
+    left: 280px;
+}
+.common-count .text {
+    display: inline-block;
+}
+.send-order {
+    display: inline-block;
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+}
+.form-container {
+    border-top: 1px rgb(207, 200, 188) solid;
+}
+.form-container .form-block {
+    margin: 10px 0;
+}
+#address input {
+    width: 300px;
+}
+.form-container .form-block .text {
+    display: inline-block;
+}
+
+.form-container .form-block .count {
+    display: inline-block;
+}
+.common-sum {
+    display: inline-block;
+}
+.button {
+    background-color: rgb(207, 200, 188);
+    border: 1px rgb(207, 200, 188) solid;
+    width: 116px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 7px;
+    position: relative;
+    margin: 15px 0 0 230px;
+    cursor: pointer;
+}

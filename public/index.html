@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Internet Shop</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="css/prices.css" type="text/css" rel="stylesheet">
+    <link href="css/stran.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/knockout.js" type="text/javascript"></script>
+    <script src="js/client.js" type="text/javascript"></script>
+    <script src="js/jquery.json.min.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="greenStripe">
+    <div class="midLogo"><img src="img/botinok.png"></div>
+</div>
+<div class="mainDiv">
+    <div class="topElem">
+        <div class="botLogo"><img src="img/boot.bmp"></div>
+        <div class="userBar">
+            <div class="feedback">
+                <div class="phoneNumber"><img src="img/telephone_call_contact.png">&nbsp &nbsp 918-193 46 57</div>
+                <div class="mail" onclick="location.href='obratnayasvyaz.html'"><img src="img/email_envelope.png">&nbsp &nbsp Обратная связь</div>
+            </div>
+            <div class="registration">
+                <div class="cart" onclick="location.href='shopcart.html'"><img src="img/Black_Cart.png"></div>
+                <div class="order-count">
+                    <div class="text">Товаров в корзине: </div>
+                    <div class="count">0</div>
+                </div>
+                <div class="send-order">
+                    <div class="text">Оформить</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="navigation">
+            <ul>
+                <li id="main-page" onclick="location.href='index.html'">главная</li>
+                <li>импорт</li>
+                <li>услуги</li>
+                <li><div style="border: 0">бренды</div></li>
+            </ul>
+            <div class="search">
+                <div class="magnifier"><img src="img/magnifier.png"></div>
+                <div id="search" class="inp"><input type="text" placeholder="Поиск"/></div>
+            </div>
+        </div>
+    </div>
+    <div class="logoText">
+        <div class="midLogoText">
+            <div class="midLogoTopText">этой<br>зимой</div>
+            <div class="midLogoBotText">не мерзни</div>
+        </div>
+    </div>
+    <div class="navigationPanel">
+        <div class="navigationItem" id="womanButton">
+            <div class="navigationItemHead">женщины</div>
+            <div class="navigationItemImg"><img src="img/weemen.png"></div>
+            <div class="navigationItemBot">
+                <p>всего</p>
+                <div class="PriceNumber" id="womenPriceNumber"></div>
+                <div class="navigationItemStripes"><img src="img/stripes.png"></div>
+            </div>
+        </div>
+        <div class="navigationItem" id="manButton">
+            <div class="navigationItemHead">мужчины</div>
+            <div class="navigationItemImg"><img src="img/men.png"></div>
+            <div class="navigationItemBot">
+                <p>всего</p>
+                <div class="PriceNumber" id="menPriceNumber"></div>
+                <div class="navigationItemStripes"><img src="img/stripes.png"></div>
+            </div>
+        </div>
+        <div class="navigationItem" id="kidButton">
+            <div class="navigationItemHead">дети</div>
+            <div class="navigationItemImg"><img src="img/kids.png"></div>
+            <div class="navigationItemBot">
+                <p>всего</p>
+                <div class="PriceNumber" id="kidsPriceNumber"></div>
+                <div class="navigationItemStripes"><img src="img/stripes.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="specialPrice" >
+            <div class="text">
+                <div>специальные</div>
+                <div id="redText">предложения</div>
+            </div>
+            <!-- ko foreach: list -->
+            <div class="priceItem">
+                <div  data-bind="css: vendor()"></div>
+                <div class="productPicture" data-bind = "style: { 'background': img() }"></div>
+                <div class="modelName" data-bind="text: name()"></div>
+                <div class="orderBuyButton" data-bind="text: price() + '$' + ' | ' + 'Добавить', click: $parent.addOrder">
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="arrows">
+            <div class="arroww" id="prev">prev</div>
+            <div class="arroww" id="next">next</div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footerItems">
+        <div class="logo"><img src="img/boot.png"></div>
+        <div class="aboutUs">
+            <ul>
+                <li>О нас</li>
+                <li>Faq</li>
+                <li>Оплата и доставка</li>
+                <li>Контакты</li>
+            </ul>
+        </div>
+        <div class="socialNetwork">
+            <ul>
+                <li><img src="img/p.png"/></li>
+                <li><img src="img/twitter.png"/></li>
+                <li><img src="img/facebook.png"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

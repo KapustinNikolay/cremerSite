@@ -1,0 +1,71 @@
+.priceItem {
+    display: inline-block;
+    width: 228px;
+    height: 329px;
+    border: 1px solid rgb(207, 200, 188);
+    margin: 1px;
+}
+.priceItem:hover {
+    border: 2px solid red;
+    margin: 0;
+}
+.converse {
+    height: 52px;
+    content: url('../img/price/converse.png');
+    margin: 0 auto 3px;
+}
+.adidas {
+    content: url('../img/price/adidas.png');
+    margin: 9px auto 30px;
+}
+.camper {
+    height: 32px;
+    content: url('../img/price/camper.png');
+    margin: 10px auto 13px;
+}
+.newBalance {
+    height: 42px;
+    content: url('../img/price/newBalance.png');
+    margin: 10px auto 3px;
+}
+.nike {
+    content: url('../img/price/nike.png');
+    margin: 15px auto 8px;
+}
+.puma {
+    height: 32px;
+    content: url('../img/price/puma.png');
+    margin: 10px auto 13px;
+}
+.superga {
+    height: 32px;
+    content: url('../img/price/superga.png');
+    margin: 10px auto 13px;
+}
+.productPicture {
+    width: 220px;
+    height: 147px;
+    padding: 3px;
+}
+.modelName {
+    text-align: center;
+    font-family: "Myriad Pro";
+    font-size: 17.32pt;
+    padding: 1px;
+    margin: 16px;
+}
+.orderBuyButton {
+    padding: 1px;
+    text-align: center;
+    cursor: pointer;
+    width: 177px;
+    height: 27px;
+    margin: 22px  auto 0;
+    background-color: rgb(254, 40, 23);
+    border: 3px rgba(254, 40, 23, .9) solid ;
+    border-radius: 20px;
+    color: white;
+    font-family: "Myriad Pro";
+    font-size: 14.26pt;
+}
+

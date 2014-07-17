@@ -1,0 +1,91 @@
+.navigated-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 30%;
+    background-color: lightgray;
+}
+.main-panel {
+    position: fixed;
+    width: 31%;
+    left: 30%;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    margin-left: 1px;
+}
+.item {
+    position: relative;
+    margin-top: 1px;
+}
+.view-button {
+    position: relative;
+    border: 1px solid gray;
+}
+.view-button:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+.view-button .text-block {
+    font-family: "Myriad Pro";
+    color: black;
+    margin: 10px  50px 10px 130px;
+    font-size: 16pt;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    margin-top: -3px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid rgb(108, 108, 108);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+.work-place {
+    display: none;
+    position: relative;
+    background-color: cadetblue;
+    border: 1px solid gray;
+}
+.item-form {
+    margin: 3px;
+}
+.text-block {
+    display: inline-block;
+    font-size: 12pt;
+    font-family: "Myriad Pro";
+    margin-left: 3px;
+}
+
+#data-send-button {
+    position: relative;
+    left: 320px;
+}
+#search-button {
+    cursor: pointer;
+}
+.result {
+    border: 1px black solid;
+    width: 99%;
+    background-color: bisque;
+    padding: 1px;
+}
+.info-block {
+    display: inline-block;
+}
+.button-block {
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: 35px;
+}
+.result-item {
+    margin: 2px;
+}
